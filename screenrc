@@ -1,0 +1,12 @@
+startup_message off
+vbell off
+
+hardstatus on
+
+# change the hardstatus settings to give an window list at the bottom of the
+# screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= G}[ %H ][%= %{= w}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{W}%d %M %Y %c %{g}]'
+
+# local screenrc
+source .screenrc.local
