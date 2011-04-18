@@ -1,6 +1,3 @@
-" set the color scheme
-:colors monokai
-
 " gvim options
 :set guioptions-=m  " remove menu bar
 :set guioptions-=T  " remove toolbar
@@ -11,4 +8,7 @@
 :set guioptions-=b  " remove bottom scroll bar
 :set guioptions-=B
 
-set gfn=Consolas\ 10
+" local vim config
+if filereadable(expand("~/.gvimrc.local"))
+  source ~/.gvimrc.local
+endif
