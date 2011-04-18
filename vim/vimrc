@@ -2,7 +2,6 @@ syntax on
 
 set nocompatible
 set number
-":set cursorline " highlight current line
 set exrc         " enable per-directory .vimrc files
 set secure       " disable unsafe commands in local .vimrc files
 
@@ -14,10 +13,9 @@ set expandtab
 set smartindent
 set autoindent
 
-" highlight search terms
+" highlight searches
 set hlsearch
-" press space to turn off highlighting
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> " space disables highlighting
 
 " default encoding
 set encoding=utf-8
@@ -28,15 +26,20 @@ set nowritebackup
 
 filetype plugin on
 
+" tab completion
 set wildchar=<Tab> wildmenu wildmode=full
-set wildignore+=*.o,*.obj,*.rbc,.git,*.pyc,*.jpg,*.jpeg,*.png,*.gif
+set wildignore+=*.o,*.obj,*.rbc,.git,.bzr,.svn,*.pyc,*.jpg,*.jpeg,*.png,*.gif
 
 " CommandT plugin
 map <silent> <C-T> :CommandT<CR>
 let g:CommandTMaxHeight=20
 
-" build ctags for current dir
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" Default color scheme
+color desert
+
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
 " enable auto-completion
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -44,11 +47,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
-" Remap code completion to Ctrl+Space
-" inoremap <Nul> <C-x><C-o>
-
 " automatically remove trailing whitespace when saving
-
 " remember cursor position when removing trailing whitespace
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
@@ -66,12 +65,14 @@ autocmd BufWritePre *.ammo call <SID>StripTrailingWhitespaces()
 " python
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-" html
-autocmd BufRead *.ammo set filetype=html
-
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=grey guibg=grey
 match ExtraWhitespace /\s\+$|\t/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * highlight ExtraWhitespace ctermbg=grey guibg=grey
 autocmd BufWinLeave * call clearmatches()
+
+" local config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
