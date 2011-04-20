@@ -24,7 +24,7 @@ set encoding=utf-8
 set nobackup
 set nowritebackup
 
-# pathogen setup
+" pathogen setup
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
