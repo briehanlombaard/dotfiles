@@ -37,10 +37,6 @@ filetype plugin on
 set wildchar=<Tab> wildmenu wildmode=full
 set wildignore+=*.o,*.obj,*.rbc,.git,.bzr,.svn,*.pyc,*.jpg,*.jpeg,*.png,*.gif
 
-" CommandT plugin
-map <silent> <C-T> :CommandT<CR>
-let g:CommandTMaxHeight=20
-
 " Default color scheme
 color desert
 
