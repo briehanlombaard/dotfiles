@@ -16,6 +16,9 @@ set expandtab
 set smartindent
 set autoindent
 
+" always display statusline
+set laststatus=2
+
 " highlight searches
 set hlsearch
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR> " space disables highlighting
@@ -64,3 +67,4 @@ autocmd BufWinLeave * call clearmatches()
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
