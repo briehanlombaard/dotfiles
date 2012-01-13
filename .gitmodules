@@ -7,3 +7,6 @@
 [submodule "vim/bundle/skammer"]
 	path = vim/bundle/skammer
 	url = https://github.com/skammer/vim-css-color.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
