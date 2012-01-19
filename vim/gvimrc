@@ -8,6 +8,9 @@
 :set guioptions-=b  " remove bottom scroll bar
 :set guioptions-=B
 
+" remap code completion to Ctrl+Space (gvim needs <C-space> instead of <Nul>)
+inoremap <C-space> <C-x><C-o>
+
 " local vim config
 if filereadable(expand("~/.gvimrc.local"))
   source ~/.gvimrc.local
