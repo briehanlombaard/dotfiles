@@ -5,4 +5,4 @@ alias grep='grep -I --color=auto --exclude=tags --exclude-dir="\.git"'
 alias json='python -m json.tool'
 
 # silent curl (suppress progress bar when redirecting/piping output)
-alias curl='curl -s'
+#alias curl='curl -s'
