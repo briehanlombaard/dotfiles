@@ -66,6 +66,9 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * highlight ExtraWhitespace ctermbg=grey guibg=grey
 autocmd BufWinLeave * call clearmatches()
 
+" zencoding
+let g:user_zen_settings = {'indentation': '    '}
+
 " local config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
