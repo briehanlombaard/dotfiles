@@ -4,5 +4,8 @@ alias grep='grep -I --color=auto --exclude=tags --exclude-dir="\.git"'
 # json formatting tool
 alias json='python -m json.tool'
 
-# silent curl (suppress progress bar when redirecting/piping output)
-#alias curl='curl -s'
+# xml formatting
+alias xml='python -c "import sys; import xml.dom.minidom; s=sys.stdin.read(); print xml.dom.minidom.parseString(s).toprettyxml()"'
+
+# generate a SHA1 UUID for the given URL
+alias uuid='python -c "import sys; import uuid; url=sys.argv[1]; print \"%s\" % uuid.uuid5(uuid.NAMESPACE_URL, url)"'
