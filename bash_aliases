@@ -9,3 +9,8 @@ alias xml='python -c "import sys; import xml.dom.minidom; s=sys.stdin.read(); pr
 
 # generate a SHA1 UUID for the given URL
 alias uuid='python -c "import sys; import uuid; url=sys.argv[1]; print \"%s\" % uuid.uuid5(uuid.NAMESPACE_URL, url)"'
+
+# show a list of virtualbox virtual machines
+alias listvms='VBoxManage list vms'
+# start the given virtual machine in headless mode
+alias startvm='VBoxHeadless -startvm $1'
