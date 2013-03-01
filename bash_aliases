@@ -1,7 +1,9 @@
 # exclude ctags files, .git directories and binary files
-alias grep='grep -I --color=auto --exclude=tags --exclude-dir="\.git"'
+alias grep='grep -I --color=auto --exclude=tags --exclude=*.po --exclude=*.pot --exclude-dir="\.git"'
+alias xgrep='grep --include=*.xml'
+alias pgrep='grep --include=*.py'
 
-# json formatting tool
+# json formatting
 alias json='python -m json.tool'
 
 # xml formatting
@@ -14,3 +16,6 @@ alias uuid='python -c "import sys; import uuid; url=sys.argv[1]; print \"%s\" % 
 alias listvms='VBoxManage list vms'
 # start the given virtual machine in headless mode
 alias startvm='VBoxHeadless -startvm $1'
+
+# get a random password
+alias pass='dd if=/dev/urandom bs=1 count=6 | base64'
