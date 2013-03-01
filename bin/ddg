@@ -1,0 +1,6 @@
+#!/bin/bash
+
+q=`python -c "import sys, urllib as ul; print ul.quote_plus('${1}')"`
+url=`echo "https://duckduckgo.com/?kh=1&kj=w&ky=-1&kz=-1&k1=-1&k4=-1&q=$q"`
+
+w3m $url
