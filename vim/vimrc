@@ -16,6 +16,8 @@ set expandtab
 set smartindent
 set autoindent
 
+set diffopt=vertical
+
 " always display statusline
 set laststatus=2
 
