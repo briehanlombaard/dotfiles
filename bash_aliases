@@ -15,7 +15,7 @@ alias uuid='python -c "import sys; import uuid; url=sys.argv[1]; print \"%s\" % 
 # show a list of virtualbox virtual machines
 alias listvms='VBoxManage list vms'
 # start the given virtual machine in headless mode
-alias startvm='VBoxHeadless -startvm $1'
+alias startvm='VboxManage startvm --type=headless $1'
 
 # get a random password
 alias pass='dd if=/dev/urandom bs=1 count=6 | base64'
