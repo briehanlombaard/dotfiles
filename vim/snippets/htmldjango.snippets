@@ -16,3 +16,7 @@ snippet include
 	{% include '${1}.html' %}
 snippet csrf
 	{% csrf_token %}
+snippet with
+	{% with ${1}=${2} %}
+		${3}
+	{% endwith %}
