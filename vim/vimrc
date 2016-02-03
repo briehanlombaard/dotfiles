@@ -27,10 +27,6 @@ set hlsearch
 " default encoding
 set encoding=utf-8
 
-" no backup files
-set nobackup
-set nowritebackup
-
 " pathogen setup
 filetype off
 call pathogen#runtime_append_all_bundles()
