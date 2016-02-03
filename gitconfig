@@ -1,6 +1,8 @@
 [user]
 	name = Briehan Lombaard
 	email = briehan.lombaard@gmail.com
+[pull]
+	rebase = true
 [push]
 	default = matching
 [color]
