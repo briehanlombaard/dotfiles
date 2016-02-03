@@ -13,7 +13,6 @@ set shiftwidth=4
 set smarttab
 set softtabstop=4
 set expandtab
-set smartindent
 set autoindent
 
 set diffopt=vertical
@@ -38,7 +37,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 filetype on
-filetype plugin on
+filetype plugin indent on
 
 " tab completion
 set wildchar=<Tab> wildmenu wildmode=full
@@ -51,17 +50,8 @@ color desert
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" enable auto-completion
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
 " remap code completion to Ctrl+Space
 inoremap <Nul> <C-x><C-o>
-
-" python
-autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=grey guibg=grey
