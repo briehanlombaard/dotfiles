@@ -2,6 +2,7 @@
 alias grep='grep -I --color=auto --exclude=tags --exclude=*.po --exclude=*.pot --exclude-dir="\.git"'
 alias xgrep='grep --include=*.xml'
 alias pgrep='grep --include=*.py'
+alias hgrep='grep --include=*.html'
 
 # json formatting
 alias json='python -m json.tool'
