@@ -59,6 +59,9 @@ inoremap <Nul> <C-x><C-o>
 " python
 autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
+" java
+autocmd FileType java setlocal makeprg=javac\ %
+
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=grey guibg=grey
 match ExtraWhitespace /\s\+$|\t/
