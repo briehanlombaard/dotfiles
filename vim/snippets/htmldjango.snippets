@@ -1,5 +1,7 @@
 snippet extends
 	{% extends "${1:base.html}" %}
+snippet load
+	{% load ${1} %}
 snippet block
 	{% block ${1} %}
 	${2}
@@ -8,9 +10,13 @@ snippet for
 	{% for ${1} in ${2} %}
 	${3}
 	{% endfor %}
+snippet endfor
+	{% endfor %}
 snippet if
 	{% if ${1} %}
 	${2}
+	{% endif %}
+snippet endif
 	{% endif %}
 snippet include
 	{% include '${1}.html' %}
@@ -20,3 +26,7 @@ snippet with
 	{% with ${1}=${2} %}
 		${3}
 	{% endwith %}
+snippet comment
+	{% comment %}
+		${0}
+	{% endcomment %}
