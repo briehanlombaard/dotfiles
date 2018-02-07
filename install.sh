@@ -8,6 +8,7 @@ ln -s "${PWD}/vim" "${HOME}/.vim"
 ln -s "${PWD}/vim/vimrc" "${HOME}/.vimrc"
 ln -s "${PWD}/sqliterc" "${HOME}/.sqliterc"
 ln -s "${PWD}/gitconfig" "${HOME}/.gitconfig"
+ln -s "${PWD}/gitignore" "${HOME}/.gitignore"
 
 git submodule init
 git submodule update
