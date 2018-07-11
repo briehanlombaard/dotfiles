@@ -20,4 +20,4 @@ alias listvms='VBoxManage list vms'
 alias startvm='VBoxManage startvm $1 --type headless'
 
 # get a random password
-alias pass='dd if=/dev/urandom bs=1 count=6 | base64'
+alias pass='dd if=/dev/urandom bs=1 count=6 2> /dev/null | base64'
