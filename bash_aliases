@@ -1,5 +1,5 @@
 # exclude ctags files, .git directories and binary files
-alias grep='grep -I --color=auto --exclude=tags --exclude=*.po --exclude=*.pot --exclude-dir="\.git"'
+alias grep='grep -I --color=auto --exclude=tags --exclude=*.po --exclude=*.pot --exclude-dir="\.git" --exclude-dir=venv'
 alias xgrep='grep --include=*.xml'
 alias pgrep='grep --include=*.py'
 alias hgrep='grep --include=*.html'
