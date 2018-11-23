@@ -24,3 +24,6 @@ alias pass='dd if=/dev/urandom bs=1 count=6 2> /dev/null | base64'
 
 # download an entire site
 alias wgetall='wget -vc -nH -r $1'
+
+# shortcut to activate virtualenv
+alias activate='source venv/bin/activate'
