@@ -72,6 +72,18 @@ autocmd BufWinLeave * call clearmatches()
 " emmet
 let g:user_emmet_settings = {'indentation': '    '}
 
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
+
 " local config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
