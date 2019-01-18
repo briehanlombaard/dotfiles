@@ -36,6 +36,8 @@ call pathogen#helptags()
 filetype on
 filetype plugin on
 
+set omnifunc=syntaxcomplete#Complete
+
 " tab completion
 set wildchar=<Tab> wildmenu wildmode=full
 set wildignore+=*.o,*.obj,*.rbc,.git,.bzr,.svn,*.pyc,*.jpg,*.jpeg,*.png,*.gif
@@ -46,12 +48,6 @@ color desert
 " directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
-
-" enable auto-completion
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " remap code completion to Ctrl+Space
 inoremap <Nul> <C-x><C-o>
