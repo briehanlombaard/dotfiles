@@ -43,7 +43,7 @@ set wildchar=<Tab> wildmenu wildmode=full
 set wildignore+=*.o,*.obj,*.rbc,.git,.bzr,.svn,*.pyc,*.jpg,*.jpeg,*.png,*.gif
 
 " default color scheme
-color desert
+color jellybeans
 
 " directories for swp files
 set backupdir=~/.vim/backup
