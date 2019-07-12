@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+
+import argparse
+import numpy as np
+
+from astropy.io import fits
+
+
+def create(name, w, h, dtype, overwrite=True):
+    a = np.random.randn(w, h).astype(dtype)
+    hdu = fits.PrimaryHDU(a)
+    hdul = fits.HDUList([hdu])
+    hdul.writeto(name, overwrite=overwrite)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('--filename', default='data.fits')
+    parser.add_argument('--width', default=1024, type=int)
+    parser.add_argument('--height', default=1024, type=int)
+    parser.add_argument('--dtype', default='uint16')
+
+    arguments = parser.parse_args()
+
+    create(
+        arguments.filename,
+        arguments.width,
+        arguments.height,
+        arguments.dtype
+    )
