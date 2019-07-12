@@ -18,6 +18,9 @@ set autoindent
 
 set diffopt=vertical
 
+" use spaces for vertical split separator
+:set fillchars+=vert:\ 
+
 " always display statusline
 set laststatus=2
 
