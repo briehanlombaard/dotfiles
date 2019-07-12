@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+from random import choice
+
+
+with open('/usr/share/dict/words') as f:
+    words = f.read().split()
+
+
+print(''.join(choice(words).title() for i in range(4)))
