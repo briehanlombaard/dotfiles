@@ -15,7 +15,4 @@ export PATH=~/bin:$PATH
 # Tell virtualenv not to mess with $PS1
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
-source /usr/local/git/contrib/completion/git-prompt.sh
-source /usr/local/git/contrib/completion/git-completion.bash
-
 source ~/.bash_aliases

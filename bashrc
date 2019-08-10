@@ -1,3 +1,6 @@
+source /usr/local/git/contrib/completion/git-prompt.sh
+source /usr/local/git/contrib/completion/git-completion.bash
+
 __venv_ps1 ()
 {
    if [ -z "${VIRTUAL_ENV}" ] ; then
