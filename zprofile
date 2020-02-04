@@ -1,7 +1,3 @@
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
 # Added for Sphinx
 export LC_ALL=en_ZA.UTF-8
 export LANG=en_ZA.UTF-8
@@ -15,4 +11,4 @@ export PATH=~/bin:$PATH
 # Tell virtualenv not to mess with $PS1
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
-source ~/.bash_aliases
+source ~/.aliases

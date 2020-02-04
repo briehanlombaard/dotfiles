@@ -2,9 +2,9 @@
 
 cd "${0%/*}"
 
-ln -s "${PWD}/bash_profile" "${HOME}/.bash_profile"
-ln -s "${PWD}/bashrc" "${HOME}/.bashrc"
-ln -s "${PWD}/bash_aliases" "${HOME}/.bash_aliases"
+ln -s "${PWD}/zprofile" "${HOME}/.zprofile"
+ln -s "${PWD}/zshrc" "${HOME}/.zshrc"
+ln -s "${PWD}/aliases" "${HOME}/.aliases"
 ln -s "${PWD}/screenrc" "${HOME}/.screenrc"
 ln -s "${PWD}/vim" "${HOME}/.vim"
 ln -s "${PWD}/vim/vimrc" "${HOME}/.vimrc"
