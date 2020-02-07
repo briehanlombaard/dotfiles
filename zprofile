@@ -8,7 +8,4 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # Add local bin directory to path
 export PATH=~/bin:$PATH
 
-# Tell virtualenv not to mess with $PS1
-VIRTUAL_ENV_DISABLE_PROMPT=1
-
 source ~/.aliases
