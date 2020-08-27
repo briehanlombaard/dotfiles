@@ -61,6 +61,9 @@ autocmd FileType python set smartindent cinwords=if,elif,else,for,while,try,exce
 " java
 autocmd FileType java setlocal makeprg=javac\ %
 
+" yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=grey guibg=grey
 match ExtraWhitespace /\s\+$|\t/
